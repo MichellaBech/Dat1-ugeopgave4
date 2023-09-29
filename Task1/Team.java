@@ -4,7 +4,7 @@ public class Team
 {
 	
 	private String teamName;
-	private int rang;
+	private int rank;
 	private ArrayList<String> playersNames = new ArrayList<String>();
 
 	public Team(String teamName)
@@ -12,15 +12,15 @@ public class Team
 		this.teamName = teamName;
 	}
 
-	public int setRank(int rang)
+	public void setRank(int rank)
 	{
-		return this.rang = rang;
+		this.rank = rank;
 	}
 
 	
 	public String toString()
 	{
-		return "Team: " + teamName + " Rang: " + rang;
+		return "Team: " + this.teamName + " Rank: " + this.rang;
 	}
 
 }
