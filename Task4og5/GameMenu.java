@@ -13,13 +13,15 @@ public class GameMenu
 
 	public void displayMenu()
 	{
-		System.out.println(actions);
+		for (String s : actions)
+		System.out.println(s);
 	}
 
 	public String getAction()
 	{
+		System.out.println("Type a number to choose an action ");
+		displayMenu();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Type a number to choose an action " + actions);
 		String choice = scanner.nextLine();
 		
 		return choice;  

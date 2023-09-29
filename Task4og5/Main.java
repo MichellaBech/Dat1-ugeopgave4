@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Main
 {
 	public static void main(String[] args)
@@ -11,14 +12,12 @@ public class Main
 		actions.add("3) Pause game");
 		actions.add("4) End game");
 
-		//System.out.println(actions);
-
 		GameMenu gameMenu = new GameMenu(actions);
 		gameMenu.displayMenu();
-		getAction();
-		String userChoice = scanner.nextLine();
+
+		String userChoice = gameMenu.getAction();
 		int choice = Integer.parseInt(userChoice);
-		gameMenu.doAction(choice);
+		doAction(choice);
 	}
 
 	public static void doAction(int action)
