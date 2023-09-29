@@ -21,31 +21,29 @@ public class GuessANumber {
         Scanner scanner = new Scanner(System.in); 
 
     	// Read user input
-        String number = scanner.nextLine();
-        //int guess = Integer.parseInt(number);
 
     	
         //use hasNextDouble to check if input is numeric, 
-        if (scanner.hasNextDouble())
+        if (scanner.hasNextInt())
         {
-           double guess = scanner.nextDouble();
+           int guess = scanner.nextInt();
         // if so...
         //   Compare it with the random number
             if(guess == rnd_number)
             {
                 System.out.println("Correct!");
             }
-            else if (guess != rnd_number && guess < rnd_number) 
+            else if (guess < rnd_number) 
             {    
                 System.out.println("Please try again! Your guess is too low");
                 makeAGuess();
             }
-            else if (guess != rnd_number && guess > rnd_number) 
+            else if (guess > rnd_number) 
             {
                 System.out.println("Please try again! Your guess is too high");
                 makeAGuess();
             }
-        } else if (!scanner.hasNextDouble()) 
+        } else if (!scanner.hasNextInt()) 
         {
          System.out.println("Please type a number");
          makeAGuess();

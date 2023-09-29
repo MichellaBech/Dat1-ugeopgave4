@@ -12,11 +12,10 @@ public class Main
 		System.out.println("Hello " + name + 
 			". Nice to meet you! Please Write your age: ");
 
-		String age = scanner.nextLine();
-		int i = Integer.parseInt(age);
+		int age = scanner.nextInt();
 
 		System.out.println("Your age is: " + age);
-		int retirementStarts = 65 - i;
+		int retirementStarts = 75 - age;
 
 		System.out.println("You may assume retirement starts at " 
 			+ retirementStarts + " years.");
